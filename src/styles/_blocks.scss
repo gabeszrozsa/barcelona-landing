@@ -1,0 +1,12 @@
+@import 'blocks/hero';
+@import 'blocks/about';
+@import 'blocks/adventure';
+@import 'blocks/why-us';
+@import 'blocks/testimonials';
+@import 'blocks/book';
+@import 'blocks/info';
+@import 'blocks/cta-primary';
+
+.block {
+  padding: 70px 30px;
+}

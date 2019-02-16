@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600|Nanum+Pen+Script');
+
+h1, h2 {
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: bold;
+  font-family: 'Nanum Pen Script', cursive;
+  line-height: 75%;
+  text-align: center;
+  color: #313b36;
+}
+
+h1 {
+  font-size: 72px;
+}
+
+h2 {
+  font-size: 58px;
+}
+
+h3 {
+  font-size: 26px;
+}
+
+p {
+  line-height: 160%;
+  color: #6a6b63;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+}
+
+a {
+  font-size: 16px;
+  text-decoration: none;
+}
+
+span, h3, h5, a {
+  font-family: 'Raleway', sans-serif;
+}

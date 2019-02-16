@@ -1,0 +1,104 @@
+$green: #313b36;
+$grey: #d8d8d8;
+$white: #f8f9f9;
+
+.adventure {
+  text-align: center;
+  position: relative;
+  background-image: url('../../public/topography_bg.jpg');
+
+  .block-overlay {
+    background-color: $green;
+    opacity: 0.7;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .block-inner {
+    position: relative;
+  }
+
+  p, h3 {
+    color: $white;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+
+  h2 {
+    color: $grey;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+
+  &-sort {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    span {
+      color: $grey;
+      margin: 5px 8px;
+      line-height: 1.5;
+      padding-top: 2px;
+      padding-bottom: 2px;
+
+      > b {
+        color: $white;
+      }
+    }
+
+    span.active {
+      border-bottom: 1px solid #FFF;
+      color: white;
+    }
+  }
+
+  .card-container {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    img { width: 100%; }
+
+    a {
+      color: #FFF;
+      padding: 10px 22px;
+      border: 2px solid #fff;
+      font-weight: 600;
+      border-radius: 5px;
+      text-transform: uppercase;
+      margin-top: 10px;
+      display: inline-block;
+    }
+
+    .card-inner, .card-overlay {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .card-overlay {
+      background-color: rgba(215,97,63,0.86);
+    }
+
+    > .card-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    // div {
+    // }
+  }
+
+}

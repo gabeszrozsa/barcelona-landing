@@ -1,0 +1,25 @@
+.about {
+  text-align: center;
+  background-color: #f8f9f9;
+
+  &-content {
+    padding-top: 20px;
+    padding-bottom: 60px;
+
+    img {
+      margin-bottom: 20px;
+      width: 54px;
+    }
+  }
+
+  &-images {
+    padding-bottom: 10px;
+
+    img {
+      width: 100%;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+  }
+}
