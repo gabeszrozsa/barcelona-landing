@@ -1,3 +1,6 @@
+@import '../media';
+@import '../structure';
+
 .testimonials {
 
   &-review__text h3 {
@@ -41,4 +44,17 @@
     }
   }
 
+}
+
+@include tablet-wide {
+  .testimonials .testimonials-review {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@include desktop {
+  .testimonials .testimonials-review {
+    @include center-max-content(900px);
+  }
 }

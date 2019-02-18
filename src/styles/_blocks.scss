@@ -1,3 +1,4 @@
+@import 'blocks/nav';
 @import 'blocks/hero';
 @import 'blocks/about';
 @import 'blocks/adventure';
@@ -9,4 +10,8 @@
 
 .block {
   padding: 70px 30px;
+}
+
+a:hover {
+  text-decoration: none;
 }

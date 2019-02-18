@@ -1,3 +1,6 @@
+@import '../media';
+@import '../structure';
+
 .about {
   text-align: center;
   background-color: #f8f9f9;
@@ -15,11 +18,41 @@
   &-images {
     padding-bottom: 10px;
 
+    a {
+      @include hover(0.25s, 0.7);
+    }
+
     img {
       width: 100%;
       margin-top: 5px;
       margin-bottom: 5px;
     }
 
+  }
+}
+
+@include tablet {
+  .about {
+    &-images {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-gap: 30px;
+
+      img {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .about .about-content {
+    @include center-max-content(550px);
+  }
+}
+
+@include desktop-wide {
+  .about .about-images {
+    @include center-max-content(1350px);
   }
 }

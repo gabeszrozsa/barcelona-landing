@@ -1,3 +1,6 @@
+@import '../media';
+@import '../structure';
+
 .book {
   background-color: #f2f2f2;
   text-align: center;
@@ -19,5 +22,26 @@
     color: #FFF;
     font-size: 18px;
     font-weight: bold;
+
+    @include hover(0.2s, 0.85);
+  }
+}
+
+@include tablet {
+  .block.book {
+    padding: 80px 30px;
+  }
+
+  .book {
+    h3 {
+      display: inline-block;
+      margin-right: 25px;
+      margin-bottom: 0;
+      vertical-align: sub;
+    }
+
+    a {
+      vertical-align: middle;
+    }
   }
 }

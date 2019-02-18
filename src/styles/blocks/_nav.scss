@@ -1,0 +1,41 @@
+@import '../media';
+
+nav.navbar {
+  background-color: #252b2d;
+  padding: 1rem;
+}
+
+.navbar-dark .navbar-brand {
+  color: #FFF;
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 46px;
+  line-height: 30px;
+}
+
+.navbar-dark .navbar-toggler {
+  border: none;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #FFF;
+}
+
+@include tablet {
+  .navbar-dark .navbar-brand { margin-left: 20px; }
+}
+
+@include tablet-wide {
+  .navbar-dark .navbar-brand { margin-left: 40px; }
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0.8rem;
+    padding-left: 0.8rem;
+  }
+}
+
+@include desktop {
+  .navbar-dark .navbar-brand { margin-left: 60px; }
+}
+
+@include desktop-wide {
+  .navbar-dark .navbar-brand { margin-left: 80px; }
+}

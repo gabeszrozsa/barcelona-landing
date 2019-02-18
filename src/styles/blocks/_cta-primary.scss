@@ -1,3 +1,6 @@
+@import '../media';
+@import '../structure';
+
 .cta-primary {
   background-color: #d7613f;
   text-align: center;
@@ -20,5 +23,24 @@
     background-color: #FFF;
     font-size: 18px;
     font-weight: bold;
+
+    @include hover(0.2s, 0.85);
+  }
+}
+
+@include tablet-wide {
+  .block.cta-primary {
+    padding: 80px 30px;
+  }
+
+  .cta-primary h3 {
+    display: inline-block;
+    margin-right: 25px;
+    margin-bottom: 0;
+    vertical-align: sub;
+  }
+  .cta-primary a {
+    margin-top: 0;
+    vertical-align: middle;
   }
 }

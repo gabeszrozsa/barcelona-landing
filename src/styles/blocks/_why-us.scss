@@ -1,3 +1,6 @@
+@import '../media';
+@import '../structure';
+
 .why-us {
   background-image: url('../../public/grandcanyon_bg.jpg');
   background-position: center center;
@@ -5,16 +8,56 @@
   background-size: cover;
 
   div {
+    box-sizing: border-box;
     padding: 30px;
     border-radius: 5px;
     background-color: #FFF;
     box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 0 8px 0 rgba(0, 0, 0, 0.12);
 
-
     a {
       color: #d7613f;
       font-weight: 600;
       text-transform: uppercase;
+      @include hover(0.2s, 0.7);
     }
+  }
+}
+
+@include tablet {
+  .block.why-us {
+    padding: 100px 30px;
+  }
+
+  .why-us {
+    div {
+      max-width: 350px;
+      margin-left: auto;
+    }
+  }
+}
+
+@include tablet-wide {
+  .block.why-us {
+    padding: 150px 30px;
+  }
+
+  .why-us div {
+    margin-right: 20px;
+  }
+}
+
+@include desktop {
+  .why-us div {
+    margin-right: 150px;
+  }
+}
+
+@include desktop-wide {
+  .block.why-us {
+    padding: 200px 30px;
+  }
+
+  .why-us div {
+    margin-right: 250px;
   }
 }
