@@ -30,12 +30,51 @@ a {
 span, h3, h5, a {
   font-family: 'Raleway', sans-serif; }
 
+nav.navbar {
+  background-color: #252b2d;
+  padding: 1rem; }
+
+.navbar-dark .navbar-brand {
+  color: #FFF;
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 46px;
+  line-height: 30px; }
+
+.navbar-dark .navbar-toggler {
+  border: none; }
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #FFF; }
+
+@media (min-width: 768px) {
+  .navbar-dark .navbar-brand {
+    margin-left: 20px; } }
+
+@media (min-width: 1024px) {
+  .navbar-dark .navbar-brand {
+    margin-left: 40px; }
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0.8rem;
+    padding-left: 0.8rem; } }
+
+@media (min-width: 1280px) {
+  .navbar-dark .navbar-brand {
+    margin-left: 60px; } }
+
+@media (min-width: 1440px) {
+  .navbar-dark .navbar-brand {
+    margin-left: 80px; } }
+
+.block.hero {
+  padding: 100px 30px; }
+
 .hero {
   position: relative;
   background-image: url(public/hero_bg.jpg);
   background-position: center center;
   background-size: cover;
-  text-align: center; }
+  text-align: center;
+  margin-top: 50px; }
   .hero .block-overlay {
     background-color: #4e535c;
     opacity: 0.35;
@@ -51,6 +90,20 @@ span, h3, h5, a {
   .hero p {
     font-size: 18px; }
 
+@media (min-width: 768px) {
+  .block.hero {
+    padding: 150px 30px; } }
+
+@media (min-width: 1024px) {
+  .block.hero {
+    padding: 175px 30px; }
+  .hero h1 {
+    margin-bottom: 30px; } }
+
+@media (min-width: 1280px) {
+  .block.hero {
+    padding: 200px 30px; } }
+
 .about {
   text-align: center;
   background-color: #f8f9f9; }
@@ -62,10 +115,34 @@ span, h3, h5, a {
       width: 54px; }
   .about-images {
     padding-bottom: 10px; }
+    .about-images a {
+      transition: all 0.25s linear; }
+      .about-images a:hover {
+        opacity: 0.7; }
     .about-images img {
       width: 100%;
       margin-top: 5px;
       margin-bottom: 5px; }
+
+@media (min-width: 768px) {
+  .about-images {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 30px; }
+    .about-images img {
+      margin: 0; } }
+
+@media (min-width: 1280px) {
+  .about .about-content {
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto; } }
+
+@media (min-width: 1440px) {
+  .about .about-images {
+    max-width: 1350px;
+    margin-left: auto;
+    margin-right: auto; } }
 
 .adventure {
   text-align: center;
@@ -106,13 +183,13 @@ span, h3, h5, a {
     .adventure-sort span.active {
       border-bottom: 1px solid #FFF;
       color: white; }
-  .adventure .card-container {
+  .adventure-cards .card-container {
     position: relative;
     margin-top: 10px;
     margin-bottom: 10px; }
-    .adventure .card-container img {
+    .adventure-cards .card-container img {
       width: 100%; }
-    .adventure .card-container a {
+    .adventure-cards .card-container a {
       color: #FFF;
       padding: 10px 22px;
       border: 2px solid #fff;
@@ -121,18 +198,42 @@ span, h3, h5, a {
       text-transform: uppercase;
       margin-top: 10px;
       display: inline-block; }
-    .adventure .card-container .card-inner, .adventure .card-container .card-overlay {
+    .adventure-cards .card-container .card-inner, .adventure-cards .card-container .card-overlay {
       width: 100%;
       height: 100%;
       position: absolute;
       top: 0;
       left: 0; }
-    .adventure .card-container .card-overlay {
+    .adventure-cards .card-container .card-overlay {
       background-color: rgba(215, 97, 63, 0.86); }
-    .adventure .card-container > .card-inner {
+    .adventure-cards .card-container > .card-inner {
       display: flex;
       align-items: center;
       justify-content: center; }
+
+@media (min-width: 1280px) {
+  .adventure-content {
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto; } }
+
+@media (min-width: 768px) {
+  .adventure-cards {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px; }
+    .adventure-cards .card-container {
+      margin: 0; } }
+
+@media (min-width: 1024px) {
+  .adventure-cards {
+    grid-template-columns: auto auto auto; } }
+
+@media (min-width: 1440px) {
+  .adventure .adventure-cards {
+    max-width: 1350px;
+    margin-left: auto;
+    margin-right: auto; } }
 
 .why-us {
   background-image: url(public/grandcanyon_bg.jpg);
@@ -140,6 +241,7 @@ span, h3, h5, a {
   background-repeat: no-repeat;
   background-size: cover; }
   .why-us div {
+    box-sizing: border-box;
     padding: 30px;
     border-radius: 5px;
     background-color: #FFF;
@@ -147,7 +249,33 @@ span, h3, h5, a {
     .why-us div a {
       color: #d7613f;
       font-weight: 600;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      transition: all 0.2s linear; }
+      .why-us div a:hover {
+        opacity: 0.7; }
+
+@media (min-width: 768px) {
+  .block.why-us {
+    padding: 100px 30px; }
+  .why-us div {
+    max-width: 350px;
+    margin-left: auto; } }
+
+@media (min-width: 1024px) {
+  .block.why-us {
+    padding: 150px 30px; }
+  .why-us div {
+    margin-right: 20px; } }
+
+@media (min-width: 1280px) {
+  .why-us div {
+    margin-right: 150px; } }
+
+@media (min-width: 1440px) {
+  .block.why-us {
+    padding: 200px 30px; }
+  .why-us div {
+    margin-right: 250px; } }
 
 .testimonials-review__text h3 {
   font-weight: 400;
@@ -176,6 +304,17 @@ span, h3, h5, a {
     width: 60px;
     border-radius: 50%; }
 
+@media (min-width: 1024px) {
+  .testimonials .testimonials-review {
+    padding-left: 40px;
+    padding-right: 40px; } }
+
+@media (min-width: 1280px) {
+  .testimonials .testimonials-review {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto; } }
+
 .book {
   background-color: #f2f2f2;
   text-align: center; }
@@ -193,7 +332,21 @@ span, h3, h5, a {
     background-color: #1b1b1b;
     color: #FFF;
     font-size: 18px;
-    font-weight: bold; }
+    font-weight: bold;
+    transition: all 0.2s linear; }
+    .book a:hover {
+      opacity: 0.85; }
+
+@media (min-width: 768px) {
+  .block.book {
+    padding: 80px 30px; }
+  .book h3 {
+    display: inline-block;
+    margin-right: 25px;
+    margin-bottom: 0;
+    vertical-align: sub; }
+  .book a {
+    vertical-align: middle; } }
 
 .block.info {
   padding: 0 30px; }
@@ -215,7 +368,10 @@ span, h3, h5, a {
     background-color: #d7613f;
     color: #FFF;
     font-size: 15px;
-    font-weight: bold; }
+    font-weight: bold;
+    transition: all 0.2s linear; }
+    .info a:hover {
+      opacity: 0.85; }
   .info-content {
     padding-top: 70px;
     padding-bottom: 70px; }
@@ -229,6 +385,35 @@ span, h3, h5, a {
     background-image: url(public/info1.jpg); }
   .info-image-2 {
     background-image: url(public/info2.jpg); }
+
+@media (min-width: 768px) {
+  .info-row {
+    display: flex;
+    flex-direction: row;
+    margin-left: -30px;
+    margin-right: -30px; }
+    .info-row .info-wrapper {
+      flex: 1;
+      display: grid; }
+      .info-row .info-wrapper .info-content {
+        padding: 0;
+        align-self: center;
+        justify-self: center;
+        max-width: 300px;
+        max-height: 300px; }
+    .info-row .info-image {
+      flex: 1;
+      height: 350px;
+      margin: 0; }
+  .info-row-reverse {
+    flex-direction: row-reverse; } }
+
+@media (min-width: 1280px) {
+  .info-row .info-wrapper .info-content {
+    max-width: 450px;
+    max-height: 450px; }
+  .info-row .info-image {
+    height: 500px; } }
 
 .cta-primary {
   background-color: #d7613f;
@@ -248,10 +433,28 @@ span, h3, h5, a {
     color: #1b1b1b;
     background-color: #FFF;
     font-size: 18px;
-    font-weight: bold; }
+    font-weight: bold;
+    transition: all 0.2s linear; }
+    .cta-primary a:hover {
+      opacity: 0.85; }
+
+@media (min-width: 1024px) {
+  .block.cta-primary {
+    padding: 80px 30px; }
+  .cta-primary h3 {
+    display: inline-block;
+    margin-right: 25px;
+    margin-bottom: 0;
+    vertical-align: sub; }
+  .cta-primary a {
+    margin-top: 0;
+    vertical-align: middle; } }
 
 .block {
   padding: 70px 30px; }
+
+a:hover {
+  text-decoration: none; }
 
 html, body {
   max-width: 100%;
